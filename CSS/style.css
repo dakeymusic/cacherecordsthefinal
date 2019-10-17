@@ -1,0 +1,380 @@
+
+/* ----- Global -----*/
+
+body{
+    margin:0px;
+    padding:0px;
+    width:auto;
+    background-color:rgb(26, 26, 26);
+    background-image: linear-gradient(rgb(19, 18, 18), rgb(29, 28, 28));
+    position:relative;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* ------ Mobile Menu -----*/
+
+#hamburgerMenu{
+    padding:0px;
+    margin-top:-93px;
+    text-align:right;
+    height:10px;
+    line-height:70px;
+    padding-top:10px;
+}
+#hambLinks{
+    margin: 0 30px 0 0;
+    display:none;
+}
+#hambLinks a{
+    margin-top:30px;
+    color:white;
+    clear:right;
+    text-decoration:none;
+    margin: 0 0px;
+    line-height:70px;
+    background-color:rgba(0, 0, 0, 0.377);
+}
+#hambLinks a:hover{
+    background-color:rgba(255, 255, 255, 0.726);
+    color:black;
+}
+label{
+    margin: 0 40px 0 0 ;
+    font-size: 26px;
+    line-height:70px;
+    display:none;
+    width:26px;
+    float:right;
+}
+#toggle{
+    display:none;
+}
+
+/* ------ Main-Navbar ----- */
+
+.navbar ul{
+    position:fixed;
+    top:26px;
+    right:70px;
+    animation: menumove 1s; 
+    z-index: 9999;
+}
+.navbar a{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration:none;
+    color: #757575;
+    transition-timing-function: ease-in-out;
+    transition:0.3s;
+}
+.navbar a:hover{
+    color:white;
+}
+.navbar img {
+    animation:logoslide 2s;
+}
+
+
+/* ------ Main Section ----- */
+
+
+.Front-page{
+    min-height: 800px;
+    background-image: url(/Images/TurnTable.jpg);
+    overflow: hidden;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: slide 20s infinite;
+}
+.Front-page h1{
+    font-size:30px;
+}
+.Front-page p{
+    font-size:100px;
+    padding-top:150px;
+    text-align:center;
+}
+.frontpage-container{
+    margin-right:100px;
+    margin-left: 100px;
+}
+.frontpage-container li{
+    padding-right:50px;
+    display:inline;
+    float:right;
+}
+
+#btnwrap{
+    text-align: center;
+    margin:20px;
+}
+.btn{
+    background-color: rgba(0, 0, 0, 0);
+    border:none;
+    color:white;
+    font-size: 20px;
+    padding:20px;
+    border-radius:10px;
+    border:2px solid white;
+    transition-timing-function: ease-in-out;
+    transition:0.3s;
+    animation: opacity 4s;
+    animation: mvment 3s;
+}
+.btn:hover{
+    background:rgba(255, 255, 255, 0.87);
+    color:black;
+}
+#fadetext{
+    animation: color-change 20s infinite;
+    font-size:6vw;
+    animation: opacity 5s;
+}
+
+
+
+/* ------- Artist Page ---------*/
+
+
+.ArtistsContent{
+    grid-row: 3;
+    margin:40px;
+    color:white;
+    text-align:center;
+    padding-bottom:100px;
+    color:rgb(216, 216, 216);
+}
+.ArtistsContent p{
+    padding: 0px 30px 0px 30px;
+    font-size:12px;
+    line-height:1.3em;
+}
+.artistInfo img{
+    width: 80%;
+    border-radius:100px;
+    padding: 5px;
+}
+#ArtistsHeader{
+    padding-bottom: 1px;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+.artistInfo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+    grid-gap: 1em;
+    grid-row: 4;
+    padding-top:100px;
+}
+
+/* ------------ Slideshow/Releases -----------*/
+
+
+#slideContainer {
+    background-color:blue;
+    max-width:100%;
+    height:700px;
+    position: relative;
+    margin: auto;
+}
+#slideContainer img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: 50% 80%;
+}
+.slideshow{
+    position:relative;
+    margin:auto;
+    padding-bottom:0px;
+}
+
+.slideshow h1{
+    color:white;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.slideImages{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    display:none;
+}
+.leftSlideArrow, .rightSlideArrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top:-22px;
+    padding:16px;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select:none;
+}
+.rightSlideArrow{
+    right:0;
+    border-radius:3px 0 0 3px;
+}
+.leftSlideArrow:hover, .rightSlideArrow:hover {
+    background-color:rgba(0,0,0,0.8);
+}
+.slideDots{
+    cursor: pointer;
+    height: 15px;
+    width:15px;
+    margin:0 2px;
+    background-color:lightgray;
+    border-radius: 50%;
+    display:inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .slideDots:hover {
+    background-color:#717171;
+}
+
+
+/* -------- About Us -------- */
+
+.aboutPage {
+    width:auto;
+    min-height:500px;
+    background-position:center center;
+    background-attachment: fixed;
+    color:rgb(216, 216, 216);
+}
+#aboutHeader {
+    font-size:50px;
+}
+#aboutContent {
+    text-align: center;
+    font-size: 120%;
+    line-height:1.5em ;
+    padding-top:50px;
+    margin-right: 15%;
+    margin-left: 15%;
+    padding-bottom:60px;
+}
+
+/* ------ Contact Section ----- */
+
+#contactPage{
+    padding-top: 50px;
+    padding-bottom:30px;
+    width:auto;
+    height:100%;
+    background-position:center center;
+    background-attachment: fixed;
+    color:white;
+    overflow: hidden;
+    text-align: center;
+    background-color:rgb(73, 73, 73);
+}
+.gridContact{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    grid-gap: 1em;
+    width: 100%;
+}
+.gridContact h1{
+    text-align: center;
+    width: 100%;
+    font-size: 2.4em;
+}
+.gridContact p{
+    text-align: center;
+    width: 100%;
+}
+#socialLogos{
+    text-align: center;
+    width: 100%;
+    padding-top:10px;
+}
+#socialLogos li{
+    display:inline;
+    font-size: 45px;
+    padding-right:40px;
+    transition-timing-function: ease-in-out;
+    transition:0.8s;
+}
+#socialLogos li:hover{
+    color:rgb(15, 179, 179);
+}
+footer{
+    color: white;
+    font-size:13px;
+    text-align:center;
+    background-color:rgb(73, 73, 73);
+    padding-bottom:10px;
+}
+
+
+/* ------ KEYFRAMES ------ */
+
+
+@keyframes slide {
+    0%{
+        background-image:url(/Images/TurnTable.jpg);
+   }
+    16.6%{
+        background-image:url(/Images/TurnTable.jpg);
+   }
+    33.2%{
+        background-image:url(/Images/HeadphoneGirl.jpg);
+   }
+    49.9%{
+        background-image:url(/Images/HeadphoneGirl.jpg);
+   }
+    67%{
+        background-image: url(/Images/BlueCasette.jpeg) 
+   }
+    83%{
+        background-image: url(/Images/BlueCasette.jpeg) 
+   }
+}
+
+@keyframes color-change {
+    0%{
+        color:black;
+   }
+    33%{
+        color:white;
+   }
+    67%{
+        color:rgb(181, 10, 233);
+   }
+}
+@keyframes opacity{
+    0%{
+        opacity:0;
+   }
+    10%{
+        opacity:0;
+   }
+    64%{
+        opacity:1.0;
+   }
+}
+@keyframes mvment {
+    0%{
+        top:100px;
+   }
+}
+@keyframes logoslide {
+    0%{
+        opacity:0;
+   }
+}
+@keyframes menumove{
+    0%{
+        right:-500px;
+        opacity:0;
+   }
+}
