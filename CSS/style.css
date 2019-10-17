@@ -82,7 +82,7 @@ label{
 
 .Front-page{
     min-height: 800px;
-    background-image: url(/Images/TurnTable.jpg);
+    background-image: url(./Images/TurnTable.jpg);
     overflow: hidden;
     background-position: center bottom;
     background-size: cover;
