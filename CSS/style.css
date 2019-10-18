@@ -82,7 +82,7 @@ label{
 
 .Front-page{
     min-height: 800px;
-    background-image: url(./Images/TurnTable.jpg);
+    background-image: url(../Images/TurnTable.jpg);
     overflow: hidden;
     background-position: center bottom;
     background-size: cover;
@@ -321,22 +321,22 @@ footer{
 
 @keyframes slide {
     0%{
-        background-image:url(Images/TurnTable.jpg);
+        background-image:url(../Images/TurnTable.jpg);
    }
     16.6%{
-        background-image:url(./Images/TurnTable.jpg);
+        background-image:url(../Images/TurnTable.jpg);
    }
     33.2%{
-        background-image:url(./Images/HeadphoneGirl.jpg);
+        background-image:url(../Images/HeadphoneGirl.jpg);
    }
     49.9%{
-        background-image:url(./Images/HeadphoneGirl.jpg);
+        background-image:url(../Images/HeadphoneGirl.jpg);
    }
     67%{
-        background-image: url(./Images/BlueCasette.jpeg) 
+        background-image: url(../Images/BlueCasette.jpeg) 
    }
     83%{
-        background-image: url(./Images/BlueCasette.jpeg) 
+        background-image: url(../Images/BlueCasette.jpeg) 
    }
 }
 
